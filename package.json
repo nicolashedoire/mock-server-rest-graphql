@@ -1,0 +1,46 @@
+{
+  "name": "mock-server-rest-graphql",
+  "version": "1.0.26",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "mock-server-rest-graphql": "bin/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./client.js",
+      "require": "./client.js",
+      "types": "./index.d.ts"
+    },
+    "./server": {
+      "import": "./server.js",
+      "require": "./server.js",
+      "types": "./index.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@graphql-tools/mock": "^9.0.0",
+    "@graphql-tools/schema": "^9.0.0",
+    "graphql": "^16.0.0"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "types/",
+    "client.js",
+    "server.js",
+    "index.d.ts"
+  ],
+  "author": "Nicolas Hedoire",
+  "keywords": [
+    "mock",
+    "rest",
+    "graphql",
+    "cli"
+  ],
+  "license": "MIT",
+  "description": "Mock server REST + GraphQL dynamiques à partir d'un seul endpoints.json"
+}
